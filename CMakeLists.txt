@@ -3,4 +3,4 @@ project(SDA)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(SDA main.cpp Lab1Tema.cpp Lab1Tema.h)
+add_executable(SDA main.cpp Lab1Tema.cpp Lab1Tema.h EcOrdin2.cpp EcOrdin2.h ProgramBlueprint.h Matrice.cpp Matrice.h Prime.cpp Prime.h Meniu.cpp Meniu.h)
