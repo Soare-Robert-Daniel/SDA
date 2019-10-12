@@ -2,7 +2,7 @@
 // Created by Robert on 10/5/2019.
 //
 
-#include "Prime.h"
+#include "../include/Prime.h"
 
 using namespace std;
 

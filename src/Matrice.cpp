@@ -2,7 +2,7 @@
 // Created by Robert on 10/5/2019.
 //
 
-#include "Matrice.h"
+#include "../include/Matrice.h"
 
 using namespace std;
 

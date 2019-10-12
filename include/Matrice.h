@@ -5,7 +5,7 @@
 #ifndef SDA_MATRICE_H
 #define SDA_MATRICE_H
 
-#include "ProgramBlueprint.h"
+#include "Program.h"
 #include <iostream>
 
 class Matrice : public Program {

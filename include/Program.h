@@ -2,8 +2,8 @@
 // Created by Robert on 10/5/2019.
 //
 
-#ifndef SDA_PROGRAMBLUEPRINT_H
-#define SDA_PROGRAMBLUEPRINT_H
+#ifndef SDA_PROGRAM_H
+#define SDA_PROGRAM_H
 
 class Program{
 public:
@@ -11,4 +11,4 @@ public:
     virtual void info() = 0;
 };
 
-#endif //SDA_PROGRAMBLUEPRINT_H
+#endif //SDA_PROGRAM_H

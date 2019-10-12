@@ -2,7 +2,7 @@
 // Created by Robert on 10/5/2019.
 //
 
-#include "EcOrdin2.h"
+#include "../include/EcOrdin2.h"
 
 using namespace std;
 

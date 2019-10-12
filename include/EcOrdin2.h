@@ -5,7 +5,7 @@
 #ifndef SDA_ECORDIN2_H
 #define SDA_ECORDIN2_H
 
-#include "ProgramBlueprint.h"
+#include "Program.h"
 #include <cmath>
 #include <iostream>
 class EcOrdin2 : public Program {

@@ -7,7 +7,7 @@
 
 #include <iostream>
 #include "vector"
-#include "ProgramBlueprint.h"
+#include "Program.h"
 
 class Prime : public Program {
 public:

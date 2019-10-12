@@ -2,14 +2,14 @@
 // Created by Robert on 10/5/2019.
 //
 
-#include "Meniu.h"
+#include "../include/Meniu.h"
 
 using namespace std;
 void Meniu::exe() {
     int choice;
     cout << endl << "+----------------------- BEGIN -----------------------+" << endl;
     do {
-        cout << "# " << nume << endl;
+        cout<< endl << "# " << nume << endl;
         cout << "Optiuni: " << endl;
         cout << "   0) Iesire!" << endl;
         for(unsigned int i = 0; i < optiuni.size(); i++){
