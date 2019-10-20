@@ -5,7 +5,6 @@
 #ifndef SDA_PRIME_H
 #define SDA_PRIME_H
 
-#include <iostream>
 #include "vector"
 #include "Program.h"
 

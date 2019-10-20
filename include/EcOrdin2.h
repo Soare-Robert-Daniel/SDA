@@ -7,7 +7,7 @@
 
 #include "Program.h"
 #include <cmath>
-#include <iostream>
+
 class EcOrdin2 : public Program {
 
 public:

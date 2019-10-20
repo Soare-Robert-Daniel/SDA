@@ -35,6 +35,9 @@ void MergeSort::mergeSort(int *vec, int stanga, int dreapta) {
         mergeSort(vec, mijloc + 1, dreapta);
 
         interclasare(vec, stanga, mijloc, dreapta);
+        cout << "Rezultat interclasare pentru stanga = " << stanga << " si dreapta = " << dreapta << " => ";
+        Unelte::afisareVectorInterval(vec, stanga, dreapta);
+        cout << endl;
     }
 }
 

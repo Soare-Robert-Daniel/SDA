@@ -22,10 +22,14 @@ int main() {
 
     Meniu sortare("Algoritmi de sortare");
     sortare.adaugaOptiune(new BubbleSort());
+    sortare.adaugaOptiune(new CountingSort());
     sortare.adaugaOptiune(new SelectionSort());
     sortare.adaugaOptiune(new MergeSort());
+    sortare.adaugaOptiune(new QuickSort());
+    sortare.adaugaOptiune(new ShellSort());
+    sortare.adaugaOptiune(new RadixSort());
 
-    // ADAUGA MENIURI
+    // ADAUGA MENIURIdreapta
     meniuri.push_back(diverse);
     meniuri.push_back(sortare);
 

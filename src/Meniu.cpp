@@ -3,7 +3,7 @@
 //
 
 #include "../include/Meniu.h"
-
+#include <windows.h>
 using namespace std;
 void Meniu::exe() {
     int choice;
@@ -20,6 +20,7 @@ void Meniu::exe() {
         cout << "Introduceti numarul optiunii: "; cin >> choice;
         if(choice != 0){
             if(choice <= optiuni.size() ){
+                system("cls");
                 optiuni[choice - 1]->exe();
                 cout << endl;
                 system("pause");

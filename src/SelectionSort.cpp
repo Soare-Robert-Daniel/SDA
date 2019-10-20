@@ -19,41 +19,41 @@ void SelectionSort::info()
 
 void SelectionSort::exe()
 {
-int n, arr[100];
+int n, vec[100];
     cout << "Citeste dimensiunea vectorului: ";
     cin >> n;
     cout << "Citeste valorile vectorului: ";
     for(int i = 0; i < n; ++i)
     {
-        cin >> arr[i];
+        cin >> vec[i];
     }
-    selectionSort(arr, n);
+    selectionSort(vec, n);
 
     cout << endl << "Final " << endl << "Vector: ";
-    for(int i = 0; i < n; ++i)
-    {
-        cout << arr[i] << " ";
-    }
+    Unelte::afisareVector(vec, n);
     cout << endl;
 }
 
-void SelectionSort::selectionSort(int arr[], int& n)
+void SelectionSort::selectionSort(int vec[], int& n)
 {
     for(int i = 0; i < n; ++i)
     {
-        swap(arr[i], arr[gasesteMinimumIndex(arr, n, i)]);
+        swap(vec[i], vec[gasesteMinimumIndex(vec, n, i)]);
+        cout << "Pass " << i << " : ";
+        Unelte::afisareVector(vec, n);
+        cout << endl;
     }
 }
 
-int SelectionSort::gasesteMinimumIndex(int arr[], int& n, int startIndex)
+int SelectionSort::gasesteMinimumIndex(int vec[], int& n, int startIndex)
 {
-    int val_min = arr[startIndex];
+    int val_min = vec[startIndex];
     int index_min = startIndex;
     for(int i = startIndex + 1; i < n; ++i)
     {
-        if(arr[i] < val_min)
+        if(vec[i] < val_min)
         {
-            val_min = arr[i];
+            val_min = vec[i];
             index_min = i;
         }
     }

@@ -5,7 +5,7 @@
 #ifndef SDA_MERGESORT_H
 #define SDA_MERGESORT_H
 
-#include <iostream>
+
 #include "Program.h"
 
 class MergeSort : public Program {

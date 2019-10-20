@@ -3,7 +3,7 @@
 
 #include "Program.h"
 
-#include <iostream>
+
 class BubbleSort : public Program
 {
     public:
@@ -12,7 +12,7 @@ class BubbleSort : public Program
         void exe() override;
         void info() override;
     protected:
-        void bubbleSort(int arr[], int& n);
+        void bubbleSort(int vec[], int& n);
 };
 
 #endif // BUBBLESORT_H

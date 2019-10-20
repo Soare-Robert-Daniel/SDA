@@ -6,7 +6,6 @@
 #define SDA_MATRICE_H
 
 #include "Program.h"
-#include <iostream>
 
 class Matrice : public Program {
 public:

@@ -7,6 +7,9 @@
 
 #include "BubbleSort.h"
 #include "SelectionSort.h"
+#include "CountingSort.h"
 #include "MergeSort.h"
-
+#include "QuickSort.h"
+#include "ShellSort.h"
+#include "RadixSort.h"
 #endif //SDA_SORTARI_H
