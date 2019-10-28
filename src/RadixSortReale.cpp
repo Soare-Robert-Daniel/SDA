@@ -2,12 +2,13 @@
 // Created by Robert on 28-Oct-19.
 //
 
-#include "../include/RadixSortIntregi.h"
+#include "../include/RadixSortReale.h"
 #include <cmath>
 using namespace std;
 
-void RadixSortIntregi::exe() {
-    int n, vec[100];
+void RadixSortReale::exe() {
+    int n;
+    float vec[100];
     cout << "Citeste dimensiunea vectorului: ";
     cin >> n;
     cout << "Citeste valorile vectorului: ";
@@ -22,11 +23,11 @@ void RadixSortIntregi::exe() {
     cout << endl;
 }
 
-void RadixSortIntregi::info() {
-    cout << " Radix Sort Intregi";
+void RadixSortReale::info() {
+    cout << " Radix Sort Reale";
 }
 
-void RadixSortIntregi::radixSort(int *vec, int n) {
+void RadixSortReale::radixSort(float *vec, int n) {
 
     int** mat = new int* [n];
     for(int i = 0; i < n; ++i){
@@ -36,7 +37,18 @@ void RadixSortIntregi::radixSort(int *vec, int n) {
         }
     }
 
+
     int lungMax = 0;
+    int nrMaxZecimale = 0;
+
+    for(int i = 0; i < n; ++i){
+        nrMaxZecimale = fmax(nrMaxZecimale, (numarDeZecimale  (abs(vec[i]))));
+    }
+
+    for(int i = 0; i < n; ++i){
+        vec[i] *= pow(10, nrMaxZecimale);
+    }
+
     // Descompun numerele si le pun in matrice
     for(int i = 0; i < n; ++i){
         descompuneNumar(vec[i], mat[i]);
@@ -105,6 +117,7 @@ void RadixSortIntregi::radixSort(int *vec, int n) {
             }
         }
 
+
         for(int i = 0; i < n; ++i){
             copiazaLinii( rezultat[  pozitieDeStart[ mat[i][pozitie] + OFFSET ]  ], mat[i], lungMax + 1);
             pozitieDeStart[mat[i][pozitie] + OFFSET] ++;
@@ -122,11 +135,11 @@ void RadixSortIntregi::radixSort(int *vec, int n) {
     // Recompun numerele si le adaug in vectorul original
 
     for(int i = 0; i < n; ++i) {
-        vec[i] = recombinare(mat[i]);
+        vec[i] = recombinare(mat[i]) * pow(10, -nrMaxZecimale);
     }
 }
 
-void RadixSortIntregi::descompuneNumar(int x, int vec[]) {
+void RadixSortReale::descompuneNumar(float x, int linie[]) {
     /*
      *  Pe pozitia vec[0] se va pune lungimea vectorului
      */
@@ -134,29 +147,31 @@ void RadixSortIntregi::descompuneNumar(int x, int vec[]) {
     int semn = (x >= 0) ? 1 : -1 ;
     x = abs(x);
 
+    long int x_intreg = int(x);
+
     int n = 0;
-    while(x){
+    while(x_intreg){
         n ++;
-        vec[n] = x % 10 * semn;
-        x /= 10;
+        linie[n] = x_intreg % 10 * semn;
+        x_intreg /= 10;
     }
-    vec[0] = n;
+    linie[0] = n;
 }
 
-void RadixSortIntregi::copiazaLinii(int *a, int *b, int n) {
+void RadixSortReale::copiazaLinii(int *a, int *b, int n) {
     for(int i = 0; i < n; ++i){
         a[i] =  b[i];
     }
 }
 
-int RadixSortIntregi::recombinare(int linie[]) {
-    int x = 0;
+float RadixSortReale::recombinare(int linie[]) {
+    float x = 0.0;
     bool negativ = false;
     for(int i = linie[0]; i >= 1; i --){
         if(linie[i] < 0){
             negativ = true;
         }
-        x = x*10 + abs(linie[i]);
+        x = x * 10 + abs(linie[i]) * 1.0;
     }
 
     if(negativ){
@@ -164,4 +179,17 @@ int RadixSortIntregi::recombinare(int linie[]) {
     }
 
     return x;
+}
+
+int RadixSortReale::numarDeZecimale(float x) {
+
+    int nrZeciamele = 0;
+
+    // Aflu numarul de zecimale si transforma numarul in numar intreg prin alipirea zecimalele
+    while (x - int(x) > 0){
+        nrZeciamele ++;
+        x *= 10;
+    }
+
+    return nrZeciamele;
 }

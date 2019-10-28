@@ -28,7 +28,7 @@ int main() {
     sortare.adaugaOptiune(new QuickSort());
     sortare.adaugaOptiune(new ShellSort());
     sortare.adaugaOptiune(new RadixSort());
-    sortare.adaugaOptiune(new RadixSortIntregi());
+    sortare.adaugaOptiune(new RadixSortReale());
 
     // ADAUGA MENIURIdreapta
     meniuri.push_back(diverse);
