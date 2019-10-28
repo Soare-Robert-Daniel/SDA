@@ -23,3 +23,14 @@ void Unelte::afisareVectorInterval(int vec[], int startIndex, int endIndex)
     }
     std::cout << vec[endIndex] << " ]";
 }
+
+void Unelte::afisareMatrice(int **mat, int n, int m) {
+
+    std::cout << std::endl;
+    for(int i = 0; i < n; ++i){
+        afisareVector(mat[i], m);
+        std::cout << std::endl;
+    }
+    std::cout << std::endl;
+
+}

@@ -1,15 +1,16 @@
 //
-// Created by Robert on 10/20/2019.
+// Created by Robert on 28-Oct-19.
 //
 
-#ifndef SDA_RADIXSORT_H
-#define SDA_RADIXSORT_H
+#ifndef SDA_RADIXSORTINTREGI_H
+#define SDA_RADIXSORTINTREGI_H
+
 
 #include "Program.h"
-class RadixSort: public Program {
+class RadixSortIntregi: public Program {
 public:
-    RadixSort(){}
-    ~RadixSort(){}
+    RadixSortIntregi(){}
+    ~RadixSortIntregi(){}
     void exe() override;
     void info() override;
 
@@ -21,4 +22,4 @@ private:
 };
 
 
-#endif //SDA_RADIXSORT_H
+#endif //SDA_RADIXSORTINTREGI_H

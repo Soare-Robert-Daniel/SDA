@@ -10,6 +10,7 @@ class Unelte
         virtual ~Unelte();
         static void afisareVector(int vec[], int n);
         static void afisareVectorInterval(int vec[], int startIndex, int endIndex);
+        static void afisareMatrice(int ** mat, int n, int m);
     protected:
     private:
 };

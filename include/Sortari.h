@@ -12,4 +12,5 @@
 #include "QuickSort.h"
 #include "ShellSort.h"
 #include "RadixSort.h"
+#include "RadixSortIntregi.h"
 #endif //SDA_SORTARI_H
