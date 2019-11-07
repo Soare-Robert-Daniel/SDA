@@ -4,6 +4,7 @@
 #include "include/Meniu.h"
 #include "include/Diverse.h"
 #include "include/Sortari.h"
+#include "include/Lista.h"
 
 using namespace std;
 
@@ -30,9 +31,14 @@ int main() {
     sortare.adaugaOptiune(new RadixSort());
     sortare.adaugaOptiune(new RadixSortReale());
 
+
+    Meniu liste("Liste");
+    liste.adaugaOptiune(new ListaDubluIntalntuitaTemplate());
+
     // ADAUGA MENIURIdreapta
     meniuri.push_back(diverse);
     meniuri.push_back(sortare);
+    meniuri.push_back(liste);
 
     exe(meniuri);
     return 0;
